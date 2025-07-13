@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+body {
+  background: linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator-container {
+  backdrop-filter: blur(8px);
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 16px 32px rgba(0,0,0,0.15);
+}
+
+.calculator {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  overflow: hidden;
+  width: 340px;
+}
+
+.display {
+  font-family: 'Orbitron', monospace;
+  background: #222;
+  color: #fff;
+  font-size: 2.2rem;
+  padding: 1.2rem 1rem;
+  text-align: right;
+  letter-spacing: 2px;
+  min-height: 60px;
+  border-bottom: 2px solid #2193b0;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+  padding: 1.2rem;
+}
+
+.btn {
+  font-size: 1.3rem;
+  padding: 1rem 0;
+  border: none;
+  border-radius: 1rem;
+  background: #f4f4f4;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  cursor: pointer;
+  transition: all 0.18s;
+  font-family: inherit;
+  outline: none;
+  position: relative;
+}
+
+.btn:active {
+  background: #e0e7ef;
+  transform: scale(0.97);
+}
+
+.operator {
+  background: linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%);
+  color: #fff;
+  font-weight: bold;
+}
+
+.equals {
+  grid-column: span 2;
+  background: linear-gradient(135deg, #ee0979 0%, #ff6a00 100%);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.btn.operator:active,
+.btn.equals:active {
+  filter: brightness(1.2);
+}
+
+@media (max-width: 400px) {
+  .calculator {
+    width: 95vw;
+  }
+}
